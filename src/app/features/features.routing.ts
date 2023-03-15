@@ -11,4 +11,9 @@ export const featuresRoutes: Routes = [
     path: 'home',
     component: HomeComponent,
   },
+  {
+    path: 'entrada',
+    loadChildren: () =>
+      import('./entrada/entrada.module').then((m) => m.EntradaModule),
+  },
 ];
