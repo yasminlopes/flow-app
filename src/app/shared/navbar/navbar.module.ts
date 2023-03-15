@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NavBarModule } from './navbar/navbar.module';
+import { NavbarComponent } from './navbar.component';
 
 
 @NgModule({
-  declarations: [  
+  declarations: [    
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
-    NavBarModule
   ],
-  exports: [NavBarModule],
+  exports: [NavbarComponent],
 })
-export class SharedModule {}
+export class NavBarModule {}

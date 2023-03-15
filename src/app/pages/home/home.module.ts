@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { SharedModule } from 'src/app/shared/shared.module';
 import { HomeComponent } from './container/home/home.component';
 
 
@@ -9,6 +10,7 @@ import { HomeComponent } from './container/home/home.component';
   ],
   imports: [
     CommonModule,
+    SharedModule
   ],
   exports: [HomeComponent],
 })
