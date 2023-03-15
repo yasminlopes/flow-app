@@ -1,0 +1,9 @@
+<button
+  [class]="buttonClasses"
+  (click)="onClick.emit()"
+  (mouseenter)="hovered = true"
+  (mouseleave)="hovered = false"
+>
+  <span [class]="iconClasses">{{ icon }}</span>
+  {{ text }}
+</button>
