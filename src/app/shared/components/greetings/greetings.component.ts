@@ -7,3 +7,12 @@
       ? 'Boa tarde!'
       : 'Boa noite!'
   }
+
+  getCurrentDate() {
+    const dayOfWeek = this.daysOfWeek[this.currentDate.getDay()];
+    const dayOfMonth = this.currentDate.getDate();
+    const month = this.months[this.currentDate.getMonth()];
+    const year = this.currentDate.getFullYear();
+
+    return `${dayOfWeek}, ${month} ${dayOfMonth}, ${year}`;
+  }
