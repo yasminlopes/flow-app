@@ -1,35 +1,34 @@
-import { TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { By } from '@angular/platform-browser';
+import { Router, RouterOutlet } from '@angular/router';
 
 describe('AppComponent', () => {
+  let fixture: ComponentFixture<AppComponent>;
+  let appComponent: AppComponent;
+
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        RouterTestingModule.withRoutes([]),
       ],
       declarations: [
-        AppComponent
+        AppComponent,
       ],
     }).compileComponents();
+
+    fixture = TestBed.createComponent(AppComponent);
+    appComponent = fixture.componentInstance;
   });
 
   it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
+    expect(appComponent).toBeTruthy();
   });
 
-  it(`should have as title 'flow-app'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('flow-app');
+  it('should contain a router outlet', () => {
+    const routerOutlet = fixture.debugElement.query(By.directive(RouterOutlet));
+    expect(routerOutlet).toBeTruthy();
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('flow-app app is running!');
-  });
 });
