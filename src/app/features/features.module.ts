@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { featuresRoutes } from './features.routing';
 import { HomeModule } from './home/home.module';
-import { pagesRoutes } from './pages.routing';
 
 
 @NgModule({
@@ -10,10 +10,10 @@ import { pagesRoutes } from './pages.routing';
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(pagesRoutes),
+    RouterModule.forChild(featuresRoutes),
     HomeModule
   ],
   exports: [],
 })
 
-export class PagesModule {}
+export class FeaturesModule {}

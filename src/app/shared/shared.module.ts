@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NavBarModule } from './navbar/navbar.module';
+import { NavBarModule } from './components/navbar/navbar.module';
 
 
 @NgModule({
