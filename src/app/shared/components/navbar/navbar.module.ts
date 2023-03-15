@@ -1,5 +1,5 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { GlobalModule } from 'src/app/global/global.module';
 import { NavbarComponent } from './navbar.component';
@@ -10,7 +10,7 @@ import { NavbarComponent } from './navbar.component';
     NavbarComponent
   ],
   imports: [
-    BrowserModule,
+    CommonModule,
     RouterModule,
     GlobalModule
   ],

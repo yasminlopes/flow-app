@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 import { NavBarModule } from './components/navbar/navbar.module';
 import { GreetingsComponent } from './components/greetings/greetings.component';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
@@ -9,7 +9,7 @@ import { GreetingsComponent } from './components/greetings/greetings.component';
     GreetingsComponent
   ],
   imports: [
-    BrowserModule,
+    CommonModule,
     NavBarModule
   ],
   exports: [
