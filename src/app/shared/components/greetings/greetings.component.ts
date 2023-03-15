@@ -1,3 +1,4 @@
+  public currentDate: Date = new Date();
   getGreetings() {
     const currentHour = this.currentDate.getHours();
     return currentHour >= 6 && currentHour < 12
