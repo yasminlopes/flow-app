@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NAV_ITEMS } from './model/navbar';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
+  public isNavbarOpen: boolean = false;
+  public navItems = NAV_ITEMS;
+
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
+  toggleNavbar() {
+    this.isNavbarOpen = !this.isNavbarOpen;
+  }
 }
