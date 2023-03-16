@@ -8,7 +8,7 @@
   </div>
   <ul class="navbar__list" [ngClass]="{ 'navbar__list--open': isNavbarOpen }">
     <li *ngFor="let item of navItems" class="navbar__list-item">
-      <a [routerLink]="item.link" class="navbar__list-link">{{ item.label }}</a>
+      <a [routerLink]="item.link" routerLinkActive="active" class="navbar__list-link">{{ item.label }}</a>
     </li>
   </ul>
   <app-button
