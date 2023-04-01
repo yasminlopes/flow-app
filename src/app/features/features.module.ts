@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { GlobalModule } from '../global/global.module';
 import { EntradaModule } from './entrada/entrada.module';
 import { featuresRoutes } from './features.routing';
 import { HomeModule } from './home/home.module';
@@ -13,7 +14,8 @@ import { HomeModule } from './home/home.module';
     CommonModule,
     RouterModule.forChild(featuresRoutes),
     HomeModule,
-    EntradaModule
+    EntradaModule,
+    GlobalModule
   ],
   exports: [],
 })

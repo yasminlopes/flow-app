@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { GlobalModule } from 'src/app/global/global.module';
 import { EntradaComponent } from './container/entrada/entrada.component';
 
 
@@ -9,6 +10,7 @@ import { EntradaComponent } from './container/entrada/entrada.component';
   ],
   imports: [
     CommonModule,
+    GlobalModule
   ],
   exports: [],
 })

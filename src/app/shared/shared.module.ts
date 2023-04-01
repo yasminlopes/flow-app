@@ -3,7 +3,6 @@ import { NavBarModule } from './components/navbar/navbar.module';
 import { GreetingsComponent } from './components/greetings/greetings.component';
 import { CommonModule } from '@angular/common';
 
-
 @NgModule({
   declarations: [    
     GreetingsComponent
@@ -14,6 +13,7 @@ import { CommonModule } from '@angular/common';
   ],
   exports: [
     NavBarModule,
-    GreetingsComponent],
+    GreetingsComponent,
+    ],
 })
 export class SharedModule {}
