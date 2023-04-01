@@ -2,8 +2,8 @@
 @import "./assets/styles/colors";
 
 body {
-  background-color: $color-surface-500;
-  color: $color-neutral-800;
+  background: $color-primary-700;
+  color: $color-neutral-100;
 }
 
 * {
@@ -48,4 +48,8 @@ input:focus,
 select:focus,
 textarea:focus {
   outline: none;
+}
+
+main{
+  padding: 1rem 2rem;
 }
