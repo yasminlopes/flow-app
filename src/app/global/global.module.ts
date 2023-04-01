@@ -1,16 +1,15 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { ButtonComponent } from './button/button.component';
-import { TableComponent } from './table/table.component';
-
+import { ContentComponent } from './content/content.component';
 
 @NgModule({
   declarations: [  
-    ButtonComponent, TableComponent
+    ButtonComponent, ContentComponent, 
   ],
   imports: [
     CommonModule
   ],
-  exports: [ButtonComponent, TableComponent],
+  exports: [ButtonComponent, ContentComponent],
 })
 export class GlobalModule {}
