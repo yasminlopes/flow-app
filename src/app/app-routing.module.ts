@@ -6,7 +6,7 @@ import { AdminComponent } from './layouts/admin/admin.component';
 const appRoutes: Routes = [
   {
     path: '',
-    redirectTo: '',
+    redirectTo: 'home',
     pathMatch: 'full',
   },
   {
