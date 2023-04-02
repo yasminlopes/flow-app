@@ -14,7 +14,7 @@ import { EntradaModalComponent } from './container/entrada-modal/entrada-modal.c
     CommonModule,
     GlobalModule
   ],
-  exports: [EntradaModalComponent],
+  exports: [],
 })
 
 export class EntradaModule {}
