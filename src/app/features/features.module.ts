@@ -15,7 +15,6 @@ import { HomeModule } from './home/home.module';
     RouterModule.forChild(featuresRoutes),
     HomeModule,
     EntradaModule,
-    GlobalModule
   ],
   exports: [],
 })

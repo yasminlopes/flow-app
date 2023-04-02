@@ -1,18 +1,22 @@
 import { NgModule } from '@angular/core';
-import { NavBarModule } from './components/navbar/navbar.module';
 import { GreetingsComponent } from './components/greetings/greetings.component';
 import { CommonModule } from '@angular/common';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { RouterModule } from '@angular/router';
+import { GlobalModule } from '../global/global.module';
 
 @NgModule({
   declarations: [    
-    GreetingsComponent
+    GreetingsComponent,
+    NavbarComponent
   ],
   imports: [
     CommonModule,
-    NavBarModule
+    RouterModule,
+    GlobalModule
   ],
   exports: [
-    NavBarModule,
+    NavbarComponent,
     GreetingsComponent,
     ],
 })
