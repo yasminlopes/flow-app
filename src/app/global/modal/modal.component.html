@@ -1,0 +1,40 @@
+<aside class="modal-overlay" aria-modal="true" role="dialog">
+  <div class="modal-container">
+    <header class="modal-header">
+      <h1>{{ title }}</h1>
+      <app-button
+        class="modal-header__close-button"
+        icon="close"
+        color="primary"
+      ></app-button>
+      <!-- <button class="modal-header__close-button" (click)="onClose.emit()">
+        <i class="material-icons">close</i>
+      </button> -->
+    </header>
+    <div class="modal-body">
+      <ng-content></ng-content>
+    </div>
+    <hr />
+    <footer class="modal-footer">
+      <app-button
+        [icon]="'save'"
+        [text]="'Salvar'"
+        [color]="'success'"
+        (click)="onSave.emit()"
+      ></app-button>
+      <app-button
+        icon="cancel"
+        text="Cancelar"
+        color="danger"
+        (click)="onClose.emit()"
+      ></app-button>
+      <!-- <button class="modal-footer__save-button" (click)="onSave.emit()">
+        Salvar
+      </button>
+
+      <button class="modal-footer__close-button" (click)="onClose.emit()">
+        Fechar
+      </button> -->
+    </footer>
+  </div>
+</aside>
