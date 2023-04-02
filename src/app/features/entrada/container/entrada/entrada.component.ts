@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
+import { ModalService } from 'src/app/shared/services/modal.service';
+import { EntradaModalComponent } from '../entrada-modal/entrada-modal.component';
 
 @Component({
   selector: 'app-entrada',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EntradaComponent implements OnInit {
 
-  constructor() { }
+  @ViewChild("categoriaModal", { static: false }) categoriaModal: TemplateRef<EntradaModalComponent>;
+
+  constructor(
+    private modalService: ModalService
+  ) { }
 
   ngOnInit(): void {
   }
 
+  abrirModal(){
+    this.modalService.openModal(this.categoriaModal)
+  }
 }
