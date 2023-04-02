@@ -29,3 +29,15 @@
 .tc-n {
   color: $color-neutral-200;
 }
+
+.flex{
+  display: flex;
+}
+
+.space-between{
+  justify-content: space-between;
+}
+
+.main-center{
+  align-items: center;
+}
