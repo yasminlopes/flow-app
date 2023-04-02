@@ -1,4 +1,26 @@
-      (click)="abrirModal()">
+<main>
+  <div class="flex space-between main-center">
+    <div>
+      <h1>Fluxo de Entrada</h1>
+      <p class="tc-p">
+        Cadastrar suas contas de forma clara e intuitiva, separando-as em fixas
+        e variáveis.
+      </p>
+    </div>
+    <div>
+      <app-button
+      icon="category"
+      text="Cadastrar Categoria"
+      color="secondary"
+      (click)="abrirModal()"
+      >
+      </app-button>
+    </div>
+  </div>
+  <br />
+  <hr class="divider" />
+</main>
+
 <ng-template #categoriaModal>
   <app-entrada-modal></app-entrada-modal>
 </ng-template>
