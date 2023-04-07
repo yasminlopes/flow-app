@@ -1,0 +1,42 @@
+@import "../../../assets/styles/colors";
+
+.card-list {
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  .card {
+    width: 30%;
+    padding: 20px;
+    background-color: $color-primary-800;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+
+    .card__header {
+      margin-bottom: 10px;
+      gap: 10px;
+
+      .card__icon {
+        background-color: $color-secondary-400;
+        color: $color-secondary-800;
+        border-radius: 5px;
+        padding: 6px;
+      }
+
+      .card__title {
+        font-size: 1.2rem;
+        color: $color-primary-300;
+      }
+    }
+
+    .card__value {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: $color-primary-100;
+    }
+
+    @media screen and (max-width: 767px) {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+}

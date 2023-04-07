@@ -3,18 +3,21 @@ import { NgModule } from '@angular/core';
 import { ButtonComponent } from './button/button.component';
 import { ContentComponent } from './content/content.component';
 import { ModalComponent } from './modal/modal.component';
+import { CardTotalizadorComponent } from './card/card-totalizador.component';
 
 @NgModule({
   declarations: [
     ButtonComponent,
     ContentComponent,
-    ModalComponent
+    ModalComponent,
+    CardTotalizadorComponent
   ],
   imports: [CommonModule],
   exports: [
     ButtonComponent,
     ContentComponent,
-    ModalComponent
+    ModalComponent,
+    CardTotalizadorComponent
   ],
 })
 export class GlobalModule {}

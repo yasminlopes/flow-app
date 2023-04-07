@@ -1,0 +1,11 @@
+<ul class="card-list flex">
+    <ng-container *ngFor="let item of items">
+      <li class="card">
+        <div class="card__header flex main-center">
+          <span class="card__icon material-icons">{{ item.icon }}</span>
+          <span class="card__title">{{ item.title }}</span>
+        </div>
+        <h3 class="card__value">{{ item.value | currency: 'BRL' }}</h3>
+      </li>
+    </ng-container>
+  </ul>
