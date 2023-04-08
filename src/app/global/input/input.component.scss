@@ -48,7 +48,7 @@
     }
 
     &:valid {
-      border: 2px solid $color-secondary-300;
+      border: 2px solid $color-primary-500;
     }
 
     &:focus::placeholder,
@@ -82,4 +82,11 @@
   &__icon.icon-right {
     display: block;
   }
+
+  &__error-message {
+    color: $color-danger-500;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+  }
+  
 }
