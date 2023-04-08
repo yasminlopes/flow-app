@@ -1,0 +1,8 @@
+<div *ngIf="formControl.invalid && (formControl.touched || formControl.dirty)">
+  <small
+    class="text-danger"
+    *ngIf="formControl.errors && formControl.errors['required']"
+  >
+    Campo obrigatório
+  </small>
+</div>
