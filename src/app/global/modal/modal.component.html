@@ -1,25 +1,25 @@
-<aside class="modal-overlay" aria-modal="true" role="dialog">
-  <div class="modal-container">
-    <header class="modal-header">
-      <h1>{{ title }}</h1>
-      <app-button
-        class="modal-header__close-button"
-        icon="close"
-        color="primary"
-      ></app-button>
-      <!-- <button class="modal-header__close-button" (click)="onClose.emit()">
+<aside class="modal" aria-modal="true" role="dialog" tabindex="-1">
+  <div class="modal__container">
+    <header class="modal__header flex space-between main-center">
+      <h1 class="modal__title">{{ title }}</h1>
+      <button
+        class="modal__header__close-button"
+        aria-label="Fechar"
+        type="button"
+        (click)="onClose.emit()"
+      >
         <i class="material-icons">close</i>
-      </button> -->
+      </button>
     </header>
-    <div class="modal-body">
+    <div class="modal__body">
       <ng-content></ng-content>
     </div>
-    <hr />
-    <footer class="modal-footer">
+    <hr>
+    <footer class="modal__footer flex">
       <app-button
-        [icon]="'save'"
-        [text]="'Salvar'"
-        [color]="'success'"
+        icon="save"
+        text="{{ saveText }}"
+        color="success"
         (click)="onSave.emit()"
       ></app-button>
       <app-button
@@ -28,13 +28,6 @@
         color="danger"
         (click)="onClose.emit()"
       ></app-button>
-      <!-- <button class="modal-footer__save-button" (click)="onSave.emit()">
-        Salvar
-      </button>
-
-      <button class="modal-footer__close-button" (click)="onClose.emit()">
-        Fechar
-      </button> -->
     </footer>
   </div>
 </aside>
