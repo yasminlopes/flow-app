@@ -88,5 +88,13 @@
     font-size: 0.875rem;
     margin-top: 0.25rem;
   }
-  
+
+  &__disabled {
+      opacity: 0.5;
+      pointer-events: none;    
+  }
+}
+
+.not-allowed{
+  cursor: not-allowed;
 }

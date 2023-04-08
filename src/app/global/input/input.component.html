@@ -11,6 +11,8 @@
       [placeholder]="placeholder"
       [formControlName]="formControlName"
       [required]="required"
+      [disabled]="disabled"
+      [ngClass]="{ 'input-group__disabled not-allowed': disabled }"
       class="input-group__input">
     <span
       [ngClass]="{ icon: true, 'icon-left': iconLeft }"
