@@ -1,7 +1,31 @@
 <app-modal
   [title]="'Cadastrar Categoria'"
   [saveText]="'Salvar'"
-  (onClose)="fecharModal()"
+  (onClose)="closeModal()"
+  (onSave)="save()"
 >
-<p>app-entrada-modal works!</p>
+  <form [formGroup]="entradaCategoryForm">
+    <div class="row flex">
+      <div>
+        <app-select
+          [iconOptions]="categoryOptions"
+          label="Ícone"
+          [required]="true"
+          placeholder="Selecione"
+          formControlName="icon"
+          iconLeft="category"
+        >
+        </app-select>
+      </div>
+
+      <app-input
+        label="Descrição"
+        type="text"
+        iconLeft="text_fields"
+        [required]="true"
+        placeholder="Digite a descrição"
+        formControlName="name_category"
+      ></app-input>
+    </div>
+  </form>
 </app-modal>
