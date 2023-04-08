@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { GlobalModule } from 'src/app/global/global.module';
 import { EntradaComponent } from './container/entrada/entrada.component';
 import { EntradaModalComponent } from './container/entrada-modal/entrada-modal.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -12,7 +13,9 @@ import { EntradaModalComponent } from './container/entrada-modal/entrada-modal.c
   ],
   imports: [
     CommonModule,
-    GlobalModule
+    GlobalModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [],
 })
