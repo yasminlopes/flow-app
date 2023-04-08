@@ -1,47 +1,48 @@
-import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { ComponentFactoryResolver, ComponentRef, Injectable, Injector, TemplateRef, Type } from '@angular/core';
+import { Observable, Subject } from 'rxjs';
+import { DomService } from './dom.service';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
-
 export class ModalService {
-  private modalContentSubject$ = new BehaviorSubject<any>(null);
-  private modalRef: any;
-  public modalContent$ = this.modalContentSubject$.asObservable();
+  private readonly modalClosedSubject = new Subject<void>();
+  private modalComponentRef: ComponentRef<any> | null = null; // inicializa com null
 
-  constructor() {}
+  constructor(
+    private readonly componentFactoryResolver: ComponentFactoryResolver,
+    private readonly injector: Injector,
+    private readonly domService: DomService
+  ) {}
 
-  openModal(templateRef?: any) {
-    if (templateRef) {
-      this.createModal(templateRef);
-      this.appendModalToBody();
+  public openModal(templateRef: TemplateRef<any>, component: Type<any>): Observable<void> {
+    this.createModalComponent(component);
+    if (this.modalComponentRef) {
+      this.modalComponentRef.instance.title = '';
+    }
+    return this.modalClosedSubject.asObservable();
+  }
+
+  public closeModal(): void {
+    this.destroyModalComponent();
+    this.completeModalClosedSubject();
+  }
+
+  private createModalComponent(component: Type<any>): void {
+    this.modalComponentRef = this.componentFactoryResolver.resolveComponentFactory(component).create(this.injector);
+    this.domService.appendComponentToBody(this.modalComponentRef);
+  }
+
+  private destroyModalComponent(): void {
+    if (this.modalComponentRef) {
+      this.domService.removeComponentFromBody(this.modalComponentRef);
+      this.modalComponentRef.destroy();
+      this.modalComponentRef = null;
     }
   }
 
-  closeModal() {
-    if (this.modalRef) {
-      this.removeModalFromDOM();
-      this.destroyModal();
-    }
-  }
-
-  private createModal(templateRef: any) {
-    this.modalRef = templateRef.createEmbeddedView(null);
-  }
-
-  private appendModalToBody() {
-    const modalElement = this.modalRef.rootNodes[0] as HTMLElement;
-    document.body.appendChild(modalElement);
-  }
-
-  private removeModalFromDOM() {
-    const modalElement = this.modalRef.rootNodes[0] as HTMLElement;
-    modalElement.remove();
-  }
-
-  private destroyModal() {
-    this.modalRef.destroy();
-    this.modalRef = null;
+  private completeModalClosedSubject(): void {
+    this.modalClosedSubject.next();
+    this.modalClosedSubject.complete();
   }
 }
