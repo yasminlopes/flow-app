@@ -9,9 +9,10 @@
       [type]="type"
       [id]="id"
       [placeholder]="placeholder"
-      [formControlName]="formControlName"
-      [required]="required"
       [disabled]="disabled"
+      [ngModel]="value"
+      (ngModelChange)="onChange($event)"
+      [name]="formControlName"
       [ngClass]="{ 'input-group__disabled not-allowed': disabled }"
       class="input-group__input">
     <span

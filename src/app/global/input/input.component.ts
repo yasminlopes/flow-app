@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, forwardRef} from '@angular/core';
-import { FormControl, FormGroup, NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
+import { FormGroup, NG_VALUE_ACCESSOR, ControlValueAccessor, NgModel } from '@angular/forms';
 
 @Component({
   selector: 'app-input',
@@ -11,11 +11,11 @@ import { FormControl, FormGroup, NG_VALUE_ACCESSOR, ControlValueAccessor } from 
       useExisting: forwardRef(() => InputComponent),
       multi: true,
     },
+    NgModel
   ],
 })
 export class InputComponent implements OnInit, ControlValueAccessor {
 
-  @Input() formControl: FormControl;
   @Input() formGroup: FormGroup;
   @Input() id: string;
   @Input() label: string;
