@@ -6,12 +6,12 @@
       iconLeft ? 'with-left-icon' : ''
     }} input-group__container--{{ iconRight ? 'with-right-icon' : '' }}">
     <input
+      [ngModel]="value"
+      (ngModelChange)="onChange($event)"
       [type]="type"
       [id]="id"
       [placeholder]="placeholder"
       [disabled]="disabled"
-      [ngModel]="value"
-      (ngModelChange)="onChange($event)"
       [name]="formControlName"
       [ngClass]="{ 'input-group__disabled not-allowed': disabled }"
       class="input-group__input">

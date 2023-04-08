@@ -28,19 +28,26 @@ export class InputComponent implements OnInit, ControlValueAccessor {
   @Input() required: boolean = false;
   @Input() disabled: boolean = false;
   
-  public value: any = '';
+  public inputValue: any;
 
-  onChange: any = () => {};
+  onChange: any = (_: any) => {};
   onTouch: any = () => {};
 
   constructor() { }
 
   ngOnInit(): void {}
 
-  writeValue(value: any): void {
-    this.value = value;
+  public get value(): any{
+    return this.inputValue ? this.inputValue : null
+  }
+
+  public set value(value) {
     this.onChange(value);
-    this.onTouch();
+    this.inputValue = value;
+  }
+
+  writeValue(value: any): void {
+    this.value = value
   }
   
   registerOnChange(fn: any): void {
@@ -54,5 +61,7 @@ export class InputComponent implements OnInit, ControlValueAccessor {
   setDisabledState(isDisabled: boolean): void {
     this.disabled = isDisabled;
   }
+
+  
   
 }

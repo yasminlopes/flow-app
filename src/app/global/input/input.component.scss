@@ -37,22 +37,22 @@
     font-weight: 400;
     color: $color-neutral-800;
     background-color: transparent;
-
+  
     &::placeholder {
       color: $color-neutral-300;
     }
-
+  
     &:focus {
       border: 2px solid $color-primary-500;
       outline: none;
     }
-
-    &:valid {
-      border: 2px solid $color-primary-500;
-    }
-
+  
+    // &.input-group__input--valid {
+    //   border: 2px solid $color-primary-500;
+    // }
+  
     &:focus::placeholder,
-    &:valid::placeholder {
+    &.input-group__input--valid::placeholder {
       color: transparent;
     }
   }
