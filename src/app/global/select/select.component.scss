@@ -1,0 +1,39 @@
+@import "../../../assets/styles/colors";
+
+
+.select {
+  &__required {
+    font-size: 1rem;
+    color: $color-danger-500;
+  }
+}
+
+label {
+  color: $color-neutral-900;
+  font-weight: 500;
+}
+
+select {
+  width: 100%;
+  height: 56px;
+  border-radius: 8px;
+  border: 1px solid $color-neutral-200;
+  padding: 16px;
+  font-size: 1rem;
+  font-weight: 400;
+  color: $color-neutral-800;
+  background-color: transparent;
+
+  &::placeholder {
+    color: $color-neutral-300;
+  }
+
+  &:focus {
+    border: 2px solid $color-primary-500;
+    outline: none;
+  }
+}
+
+.material-icons{
+    font-size: 1.5rem
+}

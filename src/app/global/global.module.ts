@@ -6,6 +6,7 @@ import { ContentComponent } from './content/content.component';
 import { ModalComponent } from './modal/modal.component';
 import { CardTotalizadorComponent } from './card/card-totalizador.component';
 import { InputComponent } from './input/input.component';
+import { SelectComponent } from './select/select.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { InputComponent } from './input/input.component';
     ContentComponent,
     ModalComponent,
     CardTotalizadorComponent,
-    InputComponent
+    InputComponent,
+    SelectComponent
   ],
   imports: [
     CommonModule,
@@ -26,6 +28,7 @@ import { InputComponent } from './input/input.component';
     ModalComponent,
     CardTotalizadorComponent,
     InputComponent,
+    SelectComponent,
   ],
 })
 export class GlobalModule {}

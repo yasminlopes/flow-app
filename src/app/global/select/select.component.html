@@ -1,0 +1,26 @@
+<div class="select flex column">
+  <label
+    >{{ label }}<span *ngIf="required" class="select__required">*</span></label
+  >
+
+  <select
+    [(ngModel)]="selectedOption"
+    [ngClass]="iconOptions.length ? 'material-icons' : ''"
+  >
+    <ng-container *ngFor="let option of options">
+      <option [value]="option.value" (click)="selectOption(option)">
+        {{ option.description }}
+      </option>
+    </ng-container>
+
+    <ng-container *ngFor="let option of iconOptions">
+      <option
+        [value]="option.value"
+        (click)="selectOption(option)"
+        class="material-icons"
+      >
+        {{ option.description }}
+      </option>
+    </ng-container>
+  </select>
+</div>
