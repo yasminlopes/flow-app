@@ -19,6 +19,7 @@ export class EntradaComponent implements OnInit {
   }
 
   abrirModal(){
-    this.modalService.openModal(this.categoriaModal)
+    this.modalService.openModal(this.categoriaModal, EntradaModalComponent)
   }
+
 }
