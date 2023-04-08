@@ -1,6 +1,5 @@
 import { Routes } from '@angular/router';
-import { AdminComponent } from '../layouts/admin/admin.component';
-import { EntradaComponent } from './entrada/container/entrada/entrada.component';
+import { CashFlowComponent } from './cash-flow/container/cash-flow/cash-flow.component';
 import { HomeComponent } from './home/container/home/home.component';
 
 export const featuresRoutes: Routes = [
@@ -19,10 +18,10 @@ export const featuresRoutes: Routes = [
           import('./home/home.module').then((m) => m.HomeModule),
       },
       {
-        path: 'entrada',
-        component: EntradaComponent,
+        path: 'fluxo-caixa',
+        component: CashFlowComponent,
         loadChildren: () =>
-          import('./entrada/entrada.module').then((m) => m.EntradaModule),
+          import('./cash-flow/cash-flow.module').then((m) => m.CashFlowModule),
       },
     ]
     }

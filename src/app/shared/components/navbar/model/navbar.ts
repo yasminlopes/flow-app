@@ -5,6 +5,5 @@ export interface NavItem{
 
 export const NAV_ITEMS: NavItem[] = [
     { label: 'Overview', link: '/home' },
-    { label: 'Entrada', link: '/entrada' },
-    { label: 'Saída', link: '/saida' },
+    { label: 'Fluxo Caixa', link: '/fluxo-caixa' },
   ];

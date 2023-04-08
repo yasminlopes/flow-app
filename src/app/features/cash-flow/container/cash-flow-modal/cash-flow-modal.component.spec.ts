@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EntradaModalComponent } from './entrada-modal.component';
+import { CashFlowModalComponent } from './cash-flow-modal.component';
 
-describe('EntradaModalComponent', () => {
-  let component: EntradaModalComponent;
-  let fixture: ComponentFixture<EntradaModalComponent>;
+describe('CashFlowModalComponent', () => {
+  let component: CashFlowModalComponent;
+  let fixture: ComponentFixture<CashFlowModalComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EntradaModalComponent ]
+      declarations: [ CashFlowModalComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(EntradaModalComponent);
+    fixture = TestBed.createComponent(CashFlowModalComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
