@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'; 
 import { ButtonComponent } from './components/button/button.component';
-import { CardTotalizadorComponent } from './components/card/card-totalizador.component';
+import { CardTotalizerComponent } from './components/card-totalizer/card-totalizer.component';
 import { ContentComponent } from './components/content/content.component';
 import { InputComponent } from './components/input/input.component';
 import { ModalComponent } from './components/modal/modal.component';
@@ -13,7 +13,7 @@ import { SelectComponent } from './components/select/select.component';
     ButtonComponent,
     ContentComponent,
     ModalComponent,
-    CardTotalizadorComponent,
+    CardTotalizerComponent,
     InputComponent,
     SelectComponent
   ],
@@ -26,7 +26,7 @@ import { SelectComponent } from './components/select/select.component';
     ButtonComponent,
     ContentComponent,
     ModalComponent,
-    CardTotalizadorComponent,
+    CardTotalizerComponent,
     InputComponent,
     SelectComponent,
   ],

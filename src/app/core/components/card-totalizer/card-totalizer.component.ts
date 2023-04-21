@@ -7,12 +7,12 @@ interface CardItems{
 }
 
 @Component({
-  selector: 'app-card-totalizador',
-  templateUrl: './card-totalizador.component.html',
-  styleUrls: ['./card-totalizador.component.scss']
+  selector: 'app-card-totalizer',
+  templateUrl: './card-totalizer.component.html',
+  styleUrls: ['./card-totalizer.component.scss']
 })
 
-export class CardTotalizadorComponent implements OnInit {
+export class CardTotalizerComponent implements OnInit {
 
   @Input() items: CardItems[] = [];
 
