@@ -1,10 +1,10 @@
-import { NgModule } from '@angular/core';
-import { GreetingsComponent } from './components/greetings/greetings.component';
 import { CommonModule } from '@angular/common';
-import { NavbarComponent } from './components/navbar/navbar.component';
+import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { GlobalModule } from '../global/global.module';
+import { CoreModule } from '../core/core.module';
 import { FormErrorComponent } from './components/form-error/form-error.component';
+import { GreetingsComponent } from './components/greetings/greetings.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [    
@@ -15,7 +15,7 @@ import { FormErrorComponent } from './components/form-error/form-error.component
   imports: [
     CommonModule,
     RouterModule,
-    GlobalModule
+    CoreModule
   ],
   exports: [
     NavbarComponent,

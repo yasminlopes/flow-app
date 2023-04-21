@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ModalComponent } from 'src/app/global/modal/modal.component';
 import { ModalService } from 'src/app/shared/services/modal.service';
 import { CATEGORY_ICONS_OPTIONS } from '../../models/cash-flow-const';
+import { ModalComponent } from 'src/app/core/components/modal/modal.component';
 
 @Component({
   selector: 'app-cash-flow-modal',

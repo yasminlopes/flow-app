@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { GlobalModule } from 'src/app/global/global.module';
+import { CoreModule } from 'src/app/core/core.module';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { CashFlowModule } from '../cash-flow/cash-flow.module';
 import { HomeComponent } from './container/home/home.component';
@@ -13,7 +13,7 @@ import { HomeComponent } from './container/home/home.component';
   imports: [
     CommonModule,
     SharedModule,
-    GlobalModule,
+    CoreModule,
     CashFlowModule
   ],
   exports: [HomeComponent],

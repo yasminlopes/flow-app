@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FeaturesModule } from './features/features.module';
-import { AdminComponent } from './layouts/admin/admin.component';
+import { AdminComponent } from './core/layouts/admin/admin.component';
 
 const appRoutes: Routes = [
   {
