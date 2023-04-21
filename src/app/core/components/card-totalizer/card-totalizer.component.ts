@@ -3,7 +3,8 @@ import { Component, Input, OnInit } from '@angular/core';
 interface CardItems{
   icon: string,
   title: string,
-  value: number
+  value: number,
+  tooltip?: string,
 }
 
 @Component({
@@ -15,6 +16,7 @@ interface CardItems{
 export class CardTotalizerComponent implements OnInit {
 
   @Input() items: CardItems[] = [];
+  @Input() totalizer: Object;
 
   constructor() { }
 
