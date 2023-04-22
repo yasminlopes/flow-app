@@ -1,11 +1,6 @@
 @import "../../../../assets/styles/colors";
 
-.greetings {
-  display: flex;
-  flex-direction: column;
-
-  h1,
-  span {
-    color: $color-primary-100;
-  }
+h1,
+span {
+  color: $color-primary-100;
 }
