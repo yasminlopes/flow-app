@@ -5,6 +5,7 @@ import { CoreModule } from 'src/app/core/core.module';
 import { CashFlowModalComponent } from './container/cash-flow-modal/cash-flow-modal.component';
 import { CashFlowComponent } from './container/cash-flow/cash-flow.component';
 import { CashFlowListComponent } from './components/cash-flow-list/cash-flow-list.component';
+import { BrDatePipe } from 'src/app/shared/pipes/br-date.pipe';
 
 
 @NgModule({
@@ -12,6 +13,7 @@ import { CashFlowListComponent } from './components/cash-flow-list/cash-flow-lis
     CashFlowComponent,
     CashFlowModalComponent,
     CashFlowListComponent,
+    BrDatePipe
   ],
   imports: [
     CommonModule,
