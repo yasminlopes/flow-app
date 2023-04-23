@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { FeaturesModule } from './features/features.module';
 import { AdminComponent } from './core/layouts/admin/admin.component';
 import { SharedModule } from './shared/shared.module';
+import { NgToastModule } from 'ng-angular-popup';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +19,8 @@ import { SharedModule } from './shared/shared.module';
     AppRoutingModule,
     FeaturesModule,
     SharedModule,
-    HttpClientModule
+    HttpClientModule,
+    NgToastModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
