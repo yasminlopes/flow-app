@@ -12,10 +12,12 @@ export class CashFlowComponent implements OnInit {
   @ViewChild("categoriaModal", { static: false }) categoriaModal: TemplateRef<CashFlowModalComponent>;
 
   constructor(
-    private modalService: ModalService
+    private modalService: ModalService,
+    public facade: CashFlowFacade,
   ) { }
 
   ngOnInit(): void {
+    this.facade.getCashFlow()
   }
 
   abrirModal(){
