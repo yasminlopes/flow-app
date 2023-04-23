@@ -24,7 +24,6 @@ export class CashFlowModalComponent extends ModalComponent implements OnInit {
 
   override ngOnInit(): void {
     this.initForm();
-    this.cashFlowCategoryForm.valueChanges.subscribe(x => console.log(x));
   }
 
   public closeModal(){
