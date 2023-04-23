@@ -1,0 +1,34 @@
+<table>
+  <thead>
+    <tr>
+      <ng-container *ngFor="let item of columnsFields">
+        <th class="text-{{ item.textDirection }}">{{ item.name }}</th>
+      </ng-container>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <ng-container *ngFor="let item of cashFlowList">
+      <tr>
+        <td data-label="Categoria">{{ item.name_category }}</td>
+        <td data-label="Tipo">{{ item.type }}</td>
+        <td data-label="Descrição">{{ item.description }}</td>
+        <td data-label="Valor">{{ item.value }}</td>
+        <td data-label="Data Inicial">{{ item.start_date | brDate }}</td>
+        <td data-label="Data Final">{{ item.end_date | brDate }}</td>
+        <td data-label="Tipo Conta">{{ item.account_type }}</td>
+        <td data-label="Tipo Transação">{{ item.transaction_type }}</td>
+        <td data-label="Dia Referência">{{ item.reference_day }}</td>
+        <td data-label="Ações">
+          <div class="flex">
+            <app-button icon="edit" color="warning" text="Editar"></app-button>
+            <app-button
+              icon="delete"
+              color="danger"
+              text="Excluir"
+            ></app-button>
+          </div>
+        </td>
+      </tr>
+    </ng-container>
+  </tbody>

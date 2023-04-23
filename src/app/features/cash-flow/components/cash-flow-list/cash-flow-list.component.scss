@@ -1,0 +1,58 @@
+@import "../../../../core/variables";
+
+@mixin table-common {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+@mixin table-mobile {
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+
+  th,
+  td {
+    display: inline-block;
+    border: none;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tbody tr {
+    display: block;
+    margin-bottom: 0.5em;
+    border: 1px solid $color-primary-600;
+    border-radius: 10px;
+  }
+
+  tbody td::before {
+    content: attr(data-label);
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.5em;
+  }
+}
+
+table {
+  @include table-common;
+
+  th,
+  td {
+    padding: 1em;
+    border-bottom: 1px solid $color-primary-600;
+  }
+
+  tbody tr:hover {
+    background-color: $color-primary-900;
+  }
+
+  @media (max-width: 768px) {
+    @include table-mobile;
+  }
+}

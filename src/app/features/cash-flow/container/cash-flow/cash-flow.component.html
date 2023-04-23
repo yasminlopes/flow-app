@@ -19,6 +19,9 @@
   </div>
   <br />
   <hr>
+  <app-cash-flow-list
+    [cashFlowList]="facade.cashFlow$ | async"
+  ></app-cash-flow-list>
 </main>
 
 <ng-template #categoriaModal>
