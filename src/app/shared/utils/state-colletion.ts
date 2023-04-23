@@ -1,6 +1,6 @@
 import { BehaviorSubject, Observable } from 'rxjs';
 
-export class StateCollection<T extends { id: number }> {
+export class StateCollection<T extends { id: string }> {
   private readonly _collection$;
 
   constructor(value: T[]) {
@@ -19,7 +19,7 @@ export class StateCollection<T extends { id: number }> {
     this._collection$.next(value);
   }
 
-  public getById(id: number): T | undefined {
+  public getById(id: string): T | undefined {
     return this.collection.find((t) => t.id === id);
   }
 
@@ -29,11 +29,11 @@ export class StateCollection<T extends { id: number }> {
     return value;
   }
 
-  public remove(id: number): void {
+  public remove(id: string): void {
     this.collection = this.collection.filter((t) => t.id !== id);
   }
 
-  public updateById(id: number, value: T): T | undefined {
+  public updateById(id: string, value: T): T | undefined {
     const objFound = this.getById(id);
     if (!objFound) return undefined;
 
