@@ -7,6 +7,7 @@ import { ContentComponent } from './components/content/content.component';
 import { InputComponent } from './components/input/input.component';
 import { ModalComponent } from './components/modal/modal.component';
 import { SelectComponent } from './components/select/select.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { SelectComponent } from './components/select/select.component';
     ModalComponent,
     CardTotalizerComponent,
     InputComponent,
-    SelectComponent
+    SelectComponent,
+    HeaderComponent
   ],
   imports: [
     CommonModule,
@@ -29,6 +31,7 @@ import { SelectComponent } from './components/select/select.component';
     CardTotalizerComponent,
     InputComponent,
     SelectComponent,
+    HeaderComponent
   ],
 })
 
