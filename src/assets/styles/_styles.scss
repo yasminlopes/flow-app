@@ -45,3 +45,19 @@
 .column{
   flex-direction: column;
 }
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+hr {
+  border: 1px solid $color-primary-800;
+}
+
+.space-around{
+  justify-content: space-around;
+}
